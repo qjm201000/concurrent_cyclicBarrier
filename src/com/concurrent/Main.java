@@ -8,7 +8,7 @@ public class Main {
 
         Admin admin = new Admin();//发令枪管理员
         CyclicBarrier cyclicBarrier = new CyclicBarrier(player_count,admin);
-        for(int i = 0;i < 10;i++){
+        for(int i = 0;i < player_count;i++){
             Player player = new Player(cyclicBarrier);
             new Thread(player).start();
         }
